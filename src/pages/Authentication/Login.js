@@ -15,7 +15,7 @@ import { checkLogin, apiError } from "../../store/actions";
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = { username: "job@design.in", password: "123456" };
+    this.state = { username: "geekonamy@design.in", password: "123456" };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -50,7 +50,9 @@ class Login extends Component {
                             <h4 className="font-size-18 mt-4">
                               Welcome Back !
                             </h4>
-                            <p className="text-muted">Sign in to continue</p>
+                            <p className="text-muted">
+                              Sign in to continue H-Care
+                            </p>
                           </div>
 
                           {this.props.loginError && this.props.loginError ? (
@@ -141,7 +143,7 @@ class Login extends Component {
                             <p>
                               © 2021 . Crafted with{" "}
                               <i className="mdi mdi-heart text-danger"></i> by
-                              Dev
+                              Venkat Kosuri
                             </p>
                           </div>
                         </div>

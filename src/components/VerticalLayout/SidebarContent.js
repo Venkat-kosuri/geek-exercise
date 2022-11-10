@@ -4,15 +4,17 @@ import React, { Component } from "react";
 import MetisMenu from "metismenujs";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { AiOutlineFileSearch } from "react-icons/ai";
-import { BiDesktop } from "react-icons/bi";
-import { BsFillBagFill } from "react-icons/bs";
-import { BsCardHeading, BsBarChartFill } from "react-icons/bs";
-import { FiUsers } from "react-icons/fi";
-import { GiAirBalloon } from "react-icons/gi";
-import { FiSettings } from "react-icons/fi";
-import { MdOutlineSupervisorAccount } from "react-icons/md";
-import { FaHandsHelping } from "react-icons/fa";
+import { BsClockHistory } from "react-icons/bs";
+import { BiDesktop, BiMap } from "react-icons/bi";
+import {
+  AiFillPieChart,
+  AiOutlineHome,
+  AiOutlinePlus,
+  AiFillApple,
+} from "react-icons/ai";
+import { FiUsers, FiSettings } from "react-icons/fi";
+import { CiHospital1 } from "react-icons/ci";
+import { FcAndroidOs } from "react-icons/fc";
 //i18n
 import { withNamespaces } from "react-i18next";
 
@@ -92,9 +94,18 @@ class SidebarContent extends Component {
       <React.Fragment>
         <div id="sidebar-menu">
           <ul className="metismenu list-unstyled" id="side-menu">
-            <li className="menu-title">{this.props.t("Menu")}</li>
+            <li className="mb-1">
+              <Link to="/#">
+                <button className="btn btn-primary btn-md p-9">
+                  Register Patient{" "}
+                  <strong className="ma-2">
+                    <AiOutlinePlus></AiOutlinePlus>
+                  </strong>
+                </button>
+              </Link>
+            </li>
 
-            <li>
+            <li className="mb-1">
               <Link to="/dashboard" className="waves-effect">
                 <strong className="me-2">
                   <BiDesktop></BiDesktop>
@@ -105,115 +116,77 @@ class SidebarContent extends Component {
                 <span className="ms-1">{this.props.t("Dashboard")}</span>
               </Link>
             </li>
-
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
-                <strong className="me-2">
-                  <BsFillBagFill></BsFillBagFill>
-                </strong>
-                <span className="ms-1">{this.props.t("Job Pool")}</span>
-              </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="/job-portal">{this.props.t("Job List")}</Link>
-                </li>
-                <li>
-                  <Link to="#">{this.props.t("Create Job")}</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
-                <strong className="me-2">
-                  <BsCardHeading></BsCardHeading>
-                </strong>
-                <span className="ms-1">{this.props.t("Questionaries")}</span>
-              </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="#">{this.props.t("Questionaries List")}</Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
+            <li className="mb-1">
+              <Link to="/#">
                 <strong className="me-2">
                   <FiUsers></FiUsers>
                 </strong>
-                <span className="ms-1">{this.props.t("Users")}</span>
+                <span className="ms-1">{this.props.t("Patients")}</span>
               </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="/ecommerce-products">
-                    {this.props.t("User List")}
-                  </Link>
-                </li>
-              </ul>
             </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
+            <li className="mb-1">
+              <Link to="/#">
                 <strong className="me-2">
-                  <GiAirBalloon></GiAirBalloon>
+                  <AiFillPieChart></AiFillPieChart>
                 </strong>
-                <span className="ms-1">{this.props.t("Brands")}</span>
+                <span className="ms-1">{this.props.t("Overview")}</span>
               </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="#">{this.props.t("Brands List")}</Link>
-                </li>
-              </ul>
             </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
+            <li className="mb-1">
+              <Link to="/#">
                 <strong className="me-2">
-                  <BsBarChartFill></BsBarChartFill>
+                  <BiMap></BiMap>
                 </strong>
-                <span className="ms-1">{this.props.t("Job Report")}</span>
+                <span className="ms-1">{this.props.t("Map")}</span>
               </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="#">{this.props.t("Job Report List")}</Link>
-                </li>
-              </ul>
             </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
+            <li className="mb-1">
+              <Link to="/#">
                 <strong className="me-2">
-                  <MdOutlineSupervisorAccount></MdOutlineSupervisorAccount>
+                  <AiOutlineHome></AiOutlineHome>
                 </strong>
-                <span className="ms-1">{this.props.t("Supervisors")}</span>
+                <span className="ms-1">{this.props.t("Departaments")}</span>
               </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="#">{this.props.t("Supervisors List")}</Link>
-                </li>
-              </ul>
             </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
+            <li className="mb-1">
+              <Link to="/#">
                 <strong className="me-2">
-                  <FaHandsHelping></FaHandsHelping>
+                  <CiHospital1></CiHospital1>
                 </strong>
-                <span className="ms-1">{this.props.t("Sponsers")}</span>
+                <span className="ms-1">{this.props.t("Docters")}</span>
               </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="#">{this.props.t("Sponsers List")}</Link>
-                </li>
-              </ul>
             </li>
-            <li>
-              <Link to="/#" className="has-arrow waves-effect">
+            <li className="mb-1">
+              <Link to="/#">
+                <strong className="me-2">
+                  <BsClockHistory></BsClockHistory>
+                </strong>
+                <span className="ms-1">{this.props.t("History")}</span>
+              </Link>
+            </li>
+            <li className="mb-1">
+              <Link to="/#">
                 <strong className="me-2">
                   <FiSettings></FiSettings>
                 </strong>
                 <span className="ms-1">{this.props.t("Settings")}</span>
               </Link>
-              <ul className="sub-menu">
-                <li>
-                  <Link to="#">{this.props.t("Settings")}</Link>
-                </li>
-              </ul>
+            </li>
+            <li className="mb-1">
+              <Link to="/#">
+                <div
+                  className="text-center pt-5 pb-5"
+                  style={{ background: "#BCCEF8" }}
+                >
+                  <h6 className="ms-1">Get Mobile App</h6>
+                  <strong className="me-2 rounded-circle bg-white p-1 fs-3">
+                    <FcAndroidOs></FcAndroidOs>
+                  </strong>
+                  <strong className="me-2 rounded-circle bg-white p-1 fs-3">
+                    <AiFillApple></AiFillApple>
+                  </strong>
+                </div>
+              </Link>
             </li>
           </ul>
         </div>

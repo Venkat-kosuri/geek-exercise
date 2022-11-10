@@ -16,7 +16,7 @@ $sidebar-collapsed-width:  70px;
 $sidebar-width-sm:  160px;
 
 // Vertical Sidebar - Dark
-$sidebar-dark-bg: #000033; //252b3b
+$sidebar-dark-bg: #fff; //252b3b
 $sidebar-dark-menu-item-color: #8590a5;
 $sidebar-dark-menu-sub-item-color: #8590a5;
 $sidebar-dark-menu-item-icon-color: #8590a5;
@@ -86,7 +86,7 @@ $font-family-secondary:      'Inter', sans-serif;
 // scss-docs-start gray-color-variables
 $white:    #fff;
 $gray-100: #212529;
-$gray-200: #000033;
+$gray-200: #fff;
 $gray-300: #2d3448;
 $gray-400: #79859c;
 $gray-500: #8590a5;
@@ -1168,7 +1168,7 @@ $card-cap-bg:                       $gray-300;
 $card-cap-color:                    null;
 $card-height:                       null;
 $card-color:                        null;
-$card-bg:                           #000033;
+$card-bg:                           #fff;
 
 $card-title-desc:                   $gray-400;
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Collapse, Container } from "reactstrap";
+import { Collapse, Container } from "reactstrap";
 import { Link, withRouter } from "react-router-dom";
 import classname from "classnames";
 import { BsFillBagFill } from "react-icons/bs";
@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 import { BsCardHeading, BsBarChartFill } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
 import { GiAirBalloon } from "react-icons/gi";
-import { FiSettings } from "react-icons/fi";
 import { MdOutlineSupervisorAccount } from "react-icons/md";
 import { FaHandsHelping } from "react-icons/fa";
 class Navbar extends Component {

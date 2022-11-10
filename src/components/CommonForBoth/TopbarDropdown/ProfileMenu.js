@@ -10,7 +10,7 @@ import {
 import { withNamespaces } from "react-i18next";
 
 // users
-import avatar2 from "../../../assets/images/users/avatar-2.jpg";
+import avatar1 from "../../../assets/images/users/avatar-1.jpg";
 
 class ProfileMenu extends Component {
   constructor(props) {
@@ -49,13 +49,13 @@ class ProfileMenu extends Component {
           >
             <img
               className="rounded-circle header-profile-user me-1"
-              src={avatar2}
+              src={avatar1}
               alt="Header Avatar"
             />
-            <span className="d-none d-xl-inline-block ms-1 text-white">
+            <span className="d-none d-xl-inline-block ms-1 text-dark">
               {username}
             </span>
-            <i className="mdi mdi-chevron-down d-none ms-1 d-xl-inline-block text-white"></i>
+            <i className="mdi mdi-chevron-down d-none ms-1 d-xl-inline-block text-dark"></i>
           </DropdownToggle>
           <DropdownMenu className="dropdown-menu-end">
             <DropdownItem href="#">
