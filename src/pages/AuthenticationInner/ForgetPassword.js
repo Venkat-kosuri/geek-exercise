@@ -85,7 +85,7 @@ class ForgetPasswordPage extends Component {
                               </Link>{" "}
                             </p>
                             <p>
-                              © 2021 . Crafted with{" "}
+                              © 2022 . Crafted with{" "}
                               <i className="mdi mdi-heart text-danger"></i> by
                               Venkat Kosuri
                             </p>
